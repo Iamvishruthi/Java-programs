@@ -1,0 +1,14 @@
+CODING:
+class OddNumber {
+    public static void main(String args[]) {
+        System.out.println("The Odd Numbers are:");
+        for(int i=1;i<=100;i++){
+            if(i%2!=0){
+                System.out.print(i+"");
+            }
+        }
+    }
+}
+OUTPUT:
+The Odd Numbers are:
+13579111315171921232527293133353739414345474951535557596163656769717375777981838587899193959799BUILD SUCCESSFUL (total time: 0 seconds)
