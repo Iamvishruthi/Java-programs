@@ -1,0 +1,48 @@
+class Employee {
+    private int employeeId;
+    private final String name;
+    private double salary;
+    public Employee(int employeeId,String name,double salary){
+        this.employeeId=employeeId;
+        this.name=name;
+        this.salary=salary;
+    }
+        public int getEmployeeId(){
+            return employeeId;
+        }
+        public String getName(){
+            return name;
+        }
+        public double getSalary(){
+            return salary;
+        }
+        public void increaseSalary(double percentage){
+            if(percentage>0){
+                salary+=salary*(percentage/100);
+                System.out.println("Salary increased by"+salary+"%.New Salary"+salary);
+            }else{
+                System.out.println("Invalid percentage.Salary remains unchanged.");
+            }
+        }
+                
+    }
+public class EmployeeExample{
+    public static void main(String[]args){
+        Employee employee1=new Employee(1,"Selvamathi",50000.0);
+        Employee employee2=new Employee(2,"Gripsy",60000.0);
+        System.out.println(employee1.getEmployeeId()+"Employee1:ID-"+",Name-"+employee1.getName()+",salary-$:"+employee1.getSalary());
+        System.out.println("Employee2:ID-"+employee2.getEmployeeId()+",Name-"+employee2.getName()+",+salary-$:"+employee2.getSalary());
+        employee1.increaseSalary(10);
+        employee2.increaseSalary(-5);
+        System.out.println("Updated employee 1:salary-$:"+employee1.getSalary());
+        System.out.println("Updated employee 2:salary-$:"+employee2.getSalary());
+    }
+}
+
+OUTPUT:
+1Employee1:ID-,Name-Selvamathi,salary-$:50000.0
+Employee2:ID-2,Name-Gripsy,+salary-$:60000.0
+Salary increased by55000.0%.New Salary55000.0
+Invalid percentage.Salary remains unchanged.
+Updated employee 1:salary-$:55000.0
+Updated employee 2:salary-$:60000.0
